@@ -1,0 +1,212 @@
+/*VARIABLES*/
+
+$absolute: absolute;
+$relative: relative;
+$fixed: fixed;
+$auto: auto;
+$negro: #000000;
+$blanco: #ffffff;
+$cincuenta: 50%;
+$menos50: -50%;
+$center: center;
+$none: none;
+$cien: 100%;
+$cienvh: 100vh;
+$weight: bold;
+
+/*CERRANDO VARIABLES*/
+
+/*LOGIN*/
+
+.backlogin{
+    position: $absolute;
+    z-index: 20;
+    width: 25%;
+    height: $auto;
+    background-color: $blanco;
+    top: $cincuenta;
+    left: 32%;
+    transform: translate($menos50, $menos50);
+    -webkit-transform: translate($menos50, $menos50);
+    color: $negro;
+    font-family: 'Montserrat', sans-serif;
+    padding: 3%;
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+}
+
+.backlogin form h1{
+    color: $negro;
+    font-size: 150%;
+    font-weight: $weight    ;
+    text-align: $center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.backlogin form label{
+    width: 80%;
+    height: $auto;
+    font-size: 70%;
+    font-weight: $weight;
+}
+
+.backlogin form input[type=text], .backlogin form input[type=password]{
+    width: $cien;
+    height: $auto;
+    border: $none;
+    border-bottom: solid .1vh $negro;
+    border-left: solid .1vh $negro;
+    color: $negro;
+    font-size: 116%;
+    font-weight: $weight;
+    outline: $none !important;
+    outline-width: 0 !important;
+    box-shadow: $none;
+    -moz-box-shadow: $none;
+    -webkit-box-shadow: $none;
+    text-align: $center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.backlogin form input[type=submit]{
+    position: $relative;
+    margin-top: 7%;
+    display: inline-block;
+    width: auto;
+    background-color: transparent;
+    height: 7vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: solid .1vh $negro;
+	transition: 500ms;
+    outline: $none !important;
+    outline-width: 0 !important;
+    box-shadow: $none;
+    -moz-box-shadow: $none;
+    -webkit-box-shadow: $none;
+    font-weight: $weight;
+    text-align: center;
+}
+
+.backlogin form input[type=submit]:hover{
+    background-color: rgba(0,0,0,.10);
+    color: $negro;
+    border: $none;
+    -webkit-box-shadow: 10px 10px 5px -6px rgba(130,130,130,1);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(130,130,130,1);
+    box-shadow: 10px 10px 5px -6px rgba(130,130,130,1);
+  }
+
+.btnregistro{
+    position: $fixed;
+    height: $auto;
+    z-index: 20;
+    width: 30%;
+    text-align: right;
+    bottom: 6%;
+    right: 3.5%;
+}
+
+.btnregistro input{
+    width: 35%;
+    background-color: transparent;
+    height: 7vh;
+    border: solid .1vh $negro;
+	transition: 500ms;
+    outline: $none !important;
+    outline-width: 0 !important;
+    box-shadow: $none;
+    -moz-box-shadow: $none;
+    -webkit-box-shadow: $none;
+}
+
+.btnregistro input:hover{
+    border: solid .1vh grey;
+    color: grey;
+}
+
+.backlogin form a:hover{
+    color: grey;
+}
+
+    /*MEDIAQUERY*/
+
+    @media screen and (max-width: 1050px) {
+        .backlogin{
+            width: 60%;
+            top: $cincuenta;
+            left: $cincuenta;
+            transform: translate($menos50, $menos50);
+            -webkit-transform: translate($menos50, $menos50);
+            padding: 5%;
+        }
+
+        .backlogin form label{
+            width: 80%;
+            font-size: 80%;
+        }
+
+        .backlogin form input[type=text], .backlogin form input[type=password]{
+            width: $cien;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .btnregistro input{
+            display: inline-block;
+            width: $cincuenta;
+            background-color: transparent;
+            height: 7vh;
+            border: solid .1vh $negro;
+            transition: 500ms;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .backlogin{
+            width: 80%;
+            top: $cincuenta;
+            left: $cincuenta;
+            transform: translate($menos50, $menos50);
+            -webkit-transform: translate($menos50, $menos50);
+            padding: 5%;
+        }
+
+        .backlogin form label{
+            width: 80%;
+            font-size: 60%;
+        }
+
+        .backlogin form input[type=text], .backlogin form input[type=password]{
+            width: $cien;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            font-size: 60%;
+        }
+
+        .backlogin form input[type=submit]{
+            font-size: 60%;
+            width: 40%;
+        }
+
+        .btnregistro input{
+            display: inline-block;
+            width: 80%;
+            background-color: transparent;
+            height: 7vh;
+            border: solid .1vh $negro;
+            transition: 500ms;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 60%;
+        }
+
+    }
+
+    /*CERRANDO MEDIAQUERY*/
+
+/*CERRANDO LOGIN*/

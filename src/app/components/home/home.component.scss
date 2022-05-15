@@ -1,0 +1,116 @@
+/*VARIABLES*/
+
+$negro: #000;
+$transparente: transparent;
+$weight: 600;
+$absoluta: absolute;
+$relativa: relative;
+$fija: fixed;
+$z: 1;
+$z2: 2;
+$none: none;
+$cienvh: 100vh;
+$cien: 100%;
+$auto: auto;
+$center: center;
+$menos50: -50%;
+$cincuenta: 50%;
+
+/*CERRANDO VARIABLES*/
+
+.backmenu{
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+}
+
+.backmenu ul{
+  width: 100%;
+}
+
+.backmenu ul li{
+  display: inline-block;
+  padding: 4% 2%;
+  cursor: pointer;
+}
+
+.backmenu ul li a{
+  text-decoration: none;
+  color: #000;
+  transition: 400ms;
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  -ms-transition: 400ms;
+  -o-transition: 400ms;
+}
+
+.backmenu ul li a:hover{
+  color: grey;
+}
+
+.inicio {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.back_bethesda{
+  position: $absoluta;
+  top: 50%;
+  left: 50%;
+  transform: translate($menos50, $menos50);
+  -webkit-transform: translate($menos50, $menos50);
+  z-index: $z2;
+  width: 100%;
+  -moz-transform: translate($menos50, $menos50);
+  -ms-transform: translate($menos50, $menos50);
+  -o-transform: translate($menos50, $menos50);
+}
+
+.back_bethesda h1{
+    color: $negro;
+    letter-spacing: 2vh;
+    font-size: 400%;
+    background-color: $transparente;
+    font-weight: $weight;
+    text-align: $center;
+    text-align: center;
+}
+
+.back_bethesda p{
+    padding-top: 5vh;
+    color: $negro;
+    font-size: 130%;
+    letter-spacing: 4vh !important;
+    font-family: 'Raleway', sans-serif;
+    background-color: $transparente;
+    font-weight: $weight;
+    text-align: center;
+}
+
+  /*MEDIAQUERY*/
+
+  @media screen and (max-width: 1050px) {
+    .back_bethesda{
+      position: $absoluta;
+      top: 45%;
+      left: 53%;
+      text-align: $center;
+      transform: translate($menos50, $menos50);
+      -webkit-transform: translate($menos50, $menos50);
+    }
+    }
+
+    @media screen and (max-width: 600px) {
+    .back_bethesda h1{
+      font-size: 160%;
+
+    }
+    
+    .back_bethesda p{
+      font-size: 60%;
+    }
+    }
+    
+  /*CERRANDO MEDIAQUERY*/

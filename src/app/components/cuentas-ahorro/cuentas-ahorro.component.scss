@@ -1,0 +1,40 @@
+/*VARIABLES*/
+
+$negro: #000000;
+$blanco : #ffffff;
+$transparente: transparent;
+$weight: bold;
+$absoluta: absolute;
+$relativa: relative;
+$fija: fixed;
+$z: 1;
+$z2: 2;
+$none: none;
+$cienvh: 100vh;
+$cien: 100%;
+$auto: auto;
+$center: center;
+$menos50: -50%;
+$cincuenta: 50%;
+
+/*CERRANDO VARIABLES*/
+
+/*ENTREGAS*/
+
+.backcuentasahorro{
+    position: $relativa;
+    width: $cien;
+    height: $cienvh;
+    z-index: $z;
+}
+
+.bactahorro{
+    position: $absoluta;
+    width: 80% !important;
+    height: $auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*CERRANDO ENTREGAS*/

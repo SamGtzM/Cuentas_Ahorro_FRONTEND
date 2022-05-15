@@ -1,1 +1,337 @@
-/* You can add global styles to this file, and also import other style files */
+/*VARIABLES*/
+
+$negro: #000000;
+$fijo: fixed;
+$z4: 4;
+$relativa: relative;
+$transparente: transparent;
+$absoluta: absolute;
+$bold: bold;
+$menos50: -50%;
+$cincuenta: 50%;
+$center: center;
+$none: none;
+$auto: auto;
+$cien: 100%;
+
+/*CERRANDO VARIABLES*/
+*{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+body::-webkit-scrollbar{
+    background-color: #000000;
+}
+    
+body::-webkit-scrollbar-thumb, table::-webkit-scrollbar-thumb{
+  background-color: #ffffff;
+  border-right: #ffffff solid .1vh;
+}
+
+body::-webkit-scrollbar-thumb:active, table::-webkit-scrollbar-thumb:active{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar{
+  width: 4px;
+  height: 4px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+  border-radius: 20px;
+  background-color: #8FA9B4;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 20px;
+  background-color: #AB4A58;
+  filter: drop-shadow(0 1px 3px);
+  background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.4) 50%,transparent,transparent)
+} 
+
+/*TABLE*/
+
+table{
+    position: $relativa;
+    width: 100% !important;
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75);
+  }
+  
+  #thtable{
+    font-weight: $bold;
+    color: $negro;
+    text-align: $center;
+    background-color: transparent !important;
+  }
+  
+  table tbody tr td{
+    color: $negro !important;
+    font-weight: $bold;
+    font-size: 80%;
+    text-align: justify;
+  }
+  
+  table th, td{
+    padding-right: 50px !important;
+    padding-left: 50px !important;
+  }
+  
+  .mat-paginator-range-label, .mat-paginator-page-size-label, .ng-star-inserted{
+    font-weight: $bold;
+    color: $negro;
+    font-size: 100%;
+  }
+  
+  .mat-select-arrow{
+    color: $negro !important;
+  }
+  
+  .mat-form-field-infix{
+    border-bottom: $none;
+  }
+  
+  .mat-paginator{
+    background-color: $transparente !important;
+  }
+  
+  .ng-tns-c132-2{
+    background-color:  $transparente !important;
+  }
+  
+  .mat-paginator-icon{
+    color: $negro !important;
+  }
+  
+  .search-container{
+    border: $none !important;
+    width: 100% !important;
+  }
+  
+  .search{
+    background-color: transparent !important;
+    border: $none !important;
+  }
+  
+  .search::placeholder {
+    color: $negro !important;
+  }
+  
+  .ng-tns-c118-0{
+    border: $none !important;
+  }
+  
+  .mat-form-field-flex{
+    border-bottom: solid $negro .3vh !important;
+    background-color: transparent !important;
+  }
+  
+  .mat-form-field-flex:focus{
+    outline: $none !important;
+  }
+  
+  .btn_table_action{
+    cursor: pointer;
+    font-size: 150%;
+    display: inline-block;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+  }
+  
+  .btn_table_action:hover{
+    font-size: 170%;
+  }
+  
+  /*CERRANDO TABLE*/
+  
+  /*MODAL*/
+  
+  .modal-header {
+    border-bottom: $none !important;
+  }
+  
+  .modal-title{
+    font-size: 150% !important;
+    color: $negro !important;
+    width: $cien !important;
+    text-align: $center !important;
+  }
+  
+  .modal-body label{
+    width: 80%;
+    height: $auto;
+    font-size: 80%;
+    font-weight: $bold;
+    text-align: justify;
+    color: $negro !important;
+  }
+  
+  .modal-body input, .modal-body select{
+    width: 80%;
+      height: $auto;
+      border: $none;
+      border-bottom: solid .1vh $negro;
+      border-left: solid .1vh $negro;
+      color: $negro;
+      background-color: $transparente;
+      font-size: 116%;
+      font-weight: $bold;
+      outline: $none !important;
+      outline-width: 0 !important;
+      box-shadow: $none;
+      -moz-box-shadow: $none;
+      -webkit-box-shadow: $none;
+      text-align: $center;
+      margin-top: 5%;
+      margin-bottom: 5%;
+  }
+  
+  .modal-footer{
+    border-top: $none !important;
+  }
+  
+  .btn_pp{
+    position: $relativa;
+    float: right;
+    background-color: $transparente !important;
+    color: $negro !important;
+    height: 7vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: solid .1vh $negro !important;
+    transition: 500ms;
+    outline: $none !important;
+    outline-width: 0 !important;
+    box-shadow: $none !important;
+    -moz-box-shadow: $none !important;
+    -webkit-box-shadow: $none !important;
+    font-weight: $bold !important;
+    text-align: center !important;
+  }
+  
+  .btn_pp:hover{
+    background-color: rgba(255,255,255,.10) !important;
+    color: $negro !important;
+    border: $none !important;
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75) !important;
+      -moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75) !important;
+      box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75) !important;
+  }
+  
+  .btn_sc{
+    background-color: $transparente !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: $negro !important;
+    height: 7vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: solid .1vh $negro !important;
+    transition: 500ms;
+    outline: $none !important;
+    outline-width: 0 !important;
+    box-shadow: $none !important;
+    -moz-box-shadow: $none !important;
+    -webkit-box-shadow: $none !important;
+    font-weight: $bold !important;
+    text-align: center !important;
+  }
+  
+  .btn_sc:hover{
+    background-color: rgba(0,0,0,.10) !important;
+    color: $negro !important;
+    border: $none !important;
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75) !important;
+      -moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75) !important;
+      box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75) !important;
+  }
+  
+  .swal2-html-container{
+    font-weight: $bold !important;
+  }
+  
+  .swal2-confirm, .swal2-styled{
+    font-weight: $bold !important;
+    color: $negro !important;
+    background-color: $transparente !important;
+    border: solid $negro .1vh !important;
+    border-radius: $none !important;
+    -webkit-border-radius: $none !important;
+    -moz-border-radius: $none !important;
+    -ms-border-radius: $none !important;
+    -o-border-radius: $none !important;
+    transition: 1s !important;
+    -webkit-transition: 1s !important;
+    -moz-transition: 1s !important;
+    -ms-transition: 1s !important;
+    -o-transition: 1s !important;
+  }
+  
+  .swal2-confirm:hover{
+    background-color: $negro !important;
+    color: $negro !important;
+    border: $none !important;
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75) !important;
+      -moz-box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75) !important;
+      box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.75) !important;
+  }
+  
+  /*CERRANDO MODAL*/
+  
+  /*efecto*/
+  .at-item {
+    color: #3079ed;
+    animation-name: focus-in-contract;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    /* shorthand 
+    animation: focus-in-contract 1s ease 0s 1 normal none;
+    */ 
+  }
+  @keyframes focus-in-contract {
+    0%{
+      letter-spacing: 1em;
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100%{
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  /*cerrando efecto*/
+
+  /*BOTON DE HOME*/
+
+.homered{
+  position: $fijo;
+  right: 3%;
+  top: 50%;
+  z-index: $z4;
+  color: $negro;
+  transition: 1s;
+}
+
+.homered i{
+  position: $relativa;
+  width: 2.5vh;
+  background-color: $transparente;
+  font-size: 120%;
+}
+
+.homered:hover{
+  color: $negro;
+  font-size: 150%;
+}
+
+/*CERRANDO BOTON DE HOME*/

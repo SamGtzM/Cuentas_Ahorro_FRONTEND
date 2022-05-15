@@ -1,0 +1,139 @@
+<a class="homered" routerLink=""><i class="fa fa-home" aria-hidden="true"></i></a>
+
+<section class="backcuentasahorro">
+    <div class="bactahorro">
+      <div class="search-container">
+        <mat-form-field appearance="fill">
+          <input class="search" matInput placeholder="BUSCAR" autocomplete="off" (keyup)="filterData($event)">
+        </mat-form-field>
+
+        <button type="button" class="btn_pp btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          AGREGAR <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </button>
+
+      </div>
+      <!-- Button trigger modal -->
+      <table mat-table [dataSource]="dataSource" id="tabla" class="mat-elevation-z8 table-responsive hover">
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="ID">
+          <th id="thtable" mat-header-cell *matHeaderCellDef> ID </th>
+          <td id="thtable" mat-cell *matCellDef="let getcuentaahorro"> {{getcuentaahorro.id_cuenta}} </td>
+        </ng-container>
+  
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Estado">
+          <th id="thtable" mat-header-cell *matHeaderCellDef> Estado </th>
+          <td mat-cell *matCellDef="let getcuentaahorro"> {{getcuentaahorro.estado}} </td>
+        </ng-container>
+  
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Numero de cuenta">
+          <th id="thtable" mat-header-cell *matHeaderCellDef> Numero de cuenta </th>
+          <td mat-cell *matCellDef="let getcuentaahorro"> {{getcuentaahorro.numero_cuenta}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Saldo">
+          <th id="thtable" mat-header-cell *matHeaderCellDef> Saldo </th>
+          <td mat-cell *matCellDef="let getcuentaahorro"> {{getcuentaahorro.saldo}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Fecha alta">
+          <th id="thtable" mat-header-cell *matHeaderCellDef> Fecha alta </th>
+          <td mat-cell *matCellDef="let getcuentaahorro"> {{getcuentaahorro.fecha_alta}} </td>
+        </ng-container>
+  
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Accion">
+          <th id="thtable" mat-header-cell *matHeaderCellDef>  </th>
+          <td align="center"  mat-cell *matCellDef="let getcuentaahorro"> 
+            <a class="btn_table_action" (click)="getCuentasAhorroById(getcuentaahorro.id_cuenta)" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="fa fa-pencil-square-o text-primary" aria-hidden="true"></i></a>
+            <a class="btn_table_action" (click)="deleteCuentaAhorroById(getcuentaahorro.id_cuenta)"><i class="fa fa-trash text-danger" aria-hidden="true"></i></a>
+          </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator #paginator
+                [pageSize]="5"
+                [pageSizeOptions]="[5, 10, 25, 100]">
+        </mat-paginator>
+    </div> 
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cuentas de ahorro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="singupForm" (submit)="singUp(singupForm.value)">
+        <div align="center" class="modal-body">
+    
+            <label for="">Estado</label>
+    
+            <select formControlName="estado" required>
+              <option value="Activo">Activo</option>
+              <option value="Inactivo">Inactiva</option>
+            </select>
+    
+    
+            <label for="">Numero de cuenta</label>
+    
+            <input type="text" formControlName="numero_cuenta" autocomplete="off" required>
+    
+            <label for="">Saldo</label>
+    
+            <input type="text" formControlName="saldo" autocomplete="off" required>
+    
+        </div>
+        <div class="modal-footer">
+            <button type="submit" [disabled]="singupForm.invalid" class="btn_sc btn-primary">Guardar</button>
+        </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modificar cuentas de ahorro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="getcuentasahorroIdForm" (submit)="putCuentasAhorro(getcuentasahorroIdForm.value)">
+        <div align="center" class="modal-body">
+
+            <label for="">Estado</label>
+
+            <select formControlName="estado"required>
+              <option *ngFor="let estado of estado"
+                      value="{{estado.estado}}">
+                      {{estado.estado}}
+              </option>
+            </select>
+
+
+            <label for="">Numero de cuenta</label>
+
+            <input type="text" formControlName="numero_cuenta" autocomplete="off" required>
+
+            <label for="">Saldo</label>
+
+            <input type="text" formControlName="saldo" autocomplete="off" required>
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" [disabled]="getcuentasahorroIdForm.invalid" class="btn_sc btn-primary">Guardar</button>
+        </div>
+    </form>
+    </div>
+  </div>
+</div>
